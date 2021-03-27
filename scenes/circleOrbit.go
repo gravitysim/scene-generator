@@ -1,4 +1,4 @@
-package main
+package scenes
 
 import (
 	gravMath "github.com/gravitysim/gravity-commons/math"
@@ -7,7 +7,7 @@ import (
 	"math"
 )
 
-func createCircleOrbitScene() *scene.GravityScene {
+func CreateCircleOrbitScene() *scene.GravityScene {
 	centralBody := phys.NewBody("centralBody", 5e24, 6400e3, gravMath.Point{}, gravMath.Vector{})
 	satBody := phys.NewBody("satBody", 1, 1, gravMath.Point{X: 6500e3, Y: 0}, gravMath.Vector{})
 	satBody.Velocity.Y = circleVelocity(centralBody.GetMass(), satBody.Position.X)
