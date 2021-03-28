@@ -15,7 +15,7 @@ func CreateSimpleTwoBodiesCollisionScene() *scene.GravityScene {
 	gravScene := scene.GravityScene{}
 	gravScene.AddBody(&movingBody)
 	gravScene.AddBody(&staticBody)
-	gravScene.LinkBodies(&movingBody, &staticBody)
+	gravScene.LinkBodies(0, 1)
 
 	return &gravScene
 }
