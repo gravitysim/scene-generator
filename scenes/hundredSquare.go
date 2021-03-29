@@ -26,8 +26,8 @@ func CreateHundredSquareScene() *scene.GravityScene {
 	bodies := gravScene.GetBodies()
 	for i := 0; i < len(bodies); i++ {
 		for j := i + 1; j < len(bodies); j++ {
-			b1Num := uint64(gravScene.GetBodyNum(&bodies[i]))
-			b2Num := uint64(gravScene.GetBodyNum(&bodies[j]))
+			b1Num := uint64(gravScene.GetBodyNum(bodies[i]))
+			b2Num := uint64(gravScene.GetBodyNum(bodies[j]))
 			gravScene.LinkBodies(b1Num, b2Num)
 		}
 	}
